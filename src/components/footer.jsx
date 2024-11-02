@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">About BoxCraft</h3>
+            <h3 className="text-lg font-semibold mb-4">About Nilam Packers</h3>
             <p className="text-blue-200">
               Innovative corrugated packaging solutions for businesses of all
               sizes. Committed to quality, sustainability, and customer
@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
         <div className="my-8 bg-blue-800" />
         <div className="text-center text-blue-200">
-          <p>&copy; 2023 BoxCraft. All rights reserved.</p>
+          <p>&copy; 2024 Nilam Packers. All rights reserved.</p>
         </div>
       </div>
     </footer>

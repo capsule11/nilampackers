@@ -25,13 +25,13 @@ const Navbar = () => {
         <div className="w-full flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/">
-              <span className="sr-only">BoxCraft</span>
+              <span className="sr-only">Nilam Packers</span>
               <div
                 className={`text-2xl font-bold ${
                   scrolled ? "text-blue-600" : "text-gray-900"
                 }`}
               >
-                BoxCraft
+                Nilam Packers
               </div>
             </Link>
           </div>
