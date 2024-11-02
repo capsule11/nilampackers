@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.heading{
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: "bold";
+  font-size: xx-large;
+  font-variation-settings:
+    "wdth" 100;
+}
