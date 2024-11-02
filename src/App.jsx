@@ -4,12 +4,14 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
+import Home from "./pages/home";
+import Layout from "./layout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <>
-      <Route path="/" element={<div>No Routes currently</div>} />
-    </>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+    </Route>
   )
 );
 
