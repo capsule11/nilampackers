@@ -48,7 +48,7 @@ const Contact = () => {
 
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto">
             <div className="backdrop-blur-lg bg-white rounded-lg shadow-lg">
               <div className="p-6 md:p-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -242,7 +242,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative overflow-auto lg:overflow-visible">
               <div className="absolute inset-0 bg-blue-200 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1008.3308431407363!2d82.82111933171905!3d25.27650089331553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1730570051241!5m2!1sen!2sin"
