@@ -3,6 +3,8 @@ import { Send } from "lucide-react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Hero from "../../components/hero";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,21 +24,30 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const form = useRef();
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setFormData({
-      name: "",
-      email: "",
-      mobile: "",
-      requirements: "",
-      city: "",
-    });
-    setIsSubmitting(false);
-    toast.success("We will get back to you soon!");
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast.success("We will get back to you soon!");
+        },
+        (error) => {
+          toast.error("Unable to send your message",error.text);
+        }
+      );
   };
+
   return (
     <div className="flex-grow pt-16">
       <Hero
@@ -51,7 +62,7 @@ const Contact = () => {
           <div className="mx-auto">
             <div className="backdrop-blur-lg bg-white rounded-lg shadow-lg">
               <div className="p-6 md:p-10">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2 flex flex-col justify-center items-start">
                       <label htmlFor="name" className="font-semibold">
