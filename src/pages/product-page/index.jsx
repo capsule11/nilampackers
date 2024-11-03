@@ -10,8 +10,6 @@ import products from "../../data/products";
 // import { ScrollArea } from "@/components/ui/scroll-area"
 
 const ProductPage = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
   const [filterOpen, setFilterOpen] = React.useState(false);
   const [selectedCategory, setSelectedCategory] = React.useState("all");
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -99,31 +97,67 @@ const ProductPage = () => {
                         className="mt-2"
                       >
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="all" id="all" />
+                          <input
+                            type="radio"
+                            value="all"
+                            name="prd"
+                            id="all"
+                            checked={selectedCategory === "all"}
+                          />
                           <label htmlFor="all">All Products</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="boxes" id="boxes" />
+                          <input
+                            type="radio"
+                            value="boxes"
+                            id="boxes"
+                            name="prd"
+                          />
                           <label htmlFor="boxes">Boxes</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="rolls" id="rolls" />
+                          <input
+                            type="radio"
+                            value="rolls"
+                            id="rolls"
+                            name="prd"
+                          />
                           <label htmlFor="rolls">Rolls</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="sheets" id="sheets" />
+                          <input
+                            type="radio"
+                            value="sheets"
+                            id="sheets"
+                            name="prd"
+                          />
                           <label htmlFor="sheets">Sheets & Pads</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="tapes" id="tapes" />
+                          <input
+                            type="radio"
+                            value="tapes"
+                            id="tapes"
+                            name="prd"
+                          />
                           <label htmlFor="tapes">Tapes</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="films" id="films" />
+                          <input
+                            type="radio"
+                            value="films"
+                            id="films"
+                            name="prd"
+                          />
                           <label htmlFor="films">Films</label>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <input type="radio" value="custom" id="custom" />
+                          <input
+                            type="radio"
+                            value="custom"
+                            id="custom"
+                            name="prd"
+                          />
                           <label htmlFor="custom">Custom Solutions</label>
                         </div>
                       </div>
