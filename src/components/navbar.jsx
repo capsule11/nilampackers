@@ -116,12 +116,14 @@ const Navbar = () => {
                       <Link
                         to="/"
                         className="text-base font-medium text-gray-900 hover:text-blue-600"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         Home
                       </Link>
                       <Link
                         to="/products"
                         className="text-base font-medium text-gray-900 hover:text-blue-600"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         Products
                       </Link>
@@ -134,10 +136,11 @@ const Navbar = () => {
                       <Link
                         to="/contact"
                         className="text-base font-medium text-gray-900 hover:text-blue-600"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         Contact
                       </Link>
-                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg">
                         Get a Quote
                       </button>
                     </div>
