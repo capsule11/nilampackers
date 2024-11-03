@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -71,14 +72,12 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <button
-              variant={scrolled ? "default" : "outline"}
               size="sm"
               className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
             >
               Get a Quote
             </button>
             <button
-              variant="ghost"
               size="icon"
               className="md:hidden"
               onClick={() => setMobileMenuOpen(true)}
@@ -100,13 +99,12 @@ const Navbar = () => {
                 <div className="px-4 sm:px-6">
                   <div className="flex items-start justify-between">
                     <h2 className="text-lg font-medium text-gray-900">Menu</h2>
-                    <Button
-                      variant="ghost"
+                    <button
                       size="icon"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <X className="h-6 w-6 text-gray-400" aria-hidden="true" />
-                    </Button>
+                    </button>
                   </div>
                 </div>
                 <div className="mt-6 relative flex-1 px-4 sm:px-6">
@@ -139,9 +137,9 @@ const Navbar = () => {
                       >
                         Contact
                       </Link>
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                         Get a Quote
-                      </Button>
+                      </button>
                     </div>
                   </div>
                 </div>
