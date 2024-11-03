@@ -1,18 +1,17 @@
 import React from "react";
-import { Menu, X, ChevronRight, Filter } from "lucide-react";
+import { ChevronRight, Filter } from "lucide-react";
 import products from "../../data/products";
-
-// import { Button } from "@/components/ui/button"
-// import { Card, CardContent } from "@/components/ui/card"
-// import { Input } from "@/components/ui/input"
-// import { Label } from "@/components/ui/label"
-// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-// import { ScrollArea } from "@/components/ui/scroll-area"
+import Hero from "../../components/hero";
 
 const ProductPage = () => {
   const [filterOpen, setFilterOpen] = React.useState(false);
   const [selectedCategory, setSelectedCategory] = React.useState("all");
+
   const [searchTerm, setSearchTerm] = React.useState("");
+
+  const handleRadio = (e) => {
+    setSelectedCategory(e.target.value);
+  };
 
   const filteredProducts = React.useMemo(() => {
     return products.filter(
@@ -20,36 +19,16 @@ const ProductPage = () => {
         (selectedCategory === "all" || product.category === selectedCategory) &&
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  }, [selectedCategory, searchTerm, filterOpen]);
+  }, [selectedCategory, searchTerm]);
 
   return (
     <main className="flex-grow pt-16">
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden min-h-[60dvh]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-              Our Products
-            </h1>
-            <p className="mt-6 text-xl max-w-2xl mx-auto">
-              Discover our wide range of packaging solutions designed to
-              protect, present, and deliver your products with excellence.
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 z-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-auto"
-          >
-            <path
-              fill="#EBF8FF"
-              fillOpacity="1"
-              d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
-      </section>
+      <Hero
+        title={"Our Products"}
+        description={
+          "Discover our wide range of packaging solutions designed to protect, present, and deliver your products with excellence."
+        }
+      />
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +39,6 @@ const ProductPage = () => {
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="text-xl font-semibold">Filters</h2>
                     <button
-                      variant="ghost"
                       size="sm"
                       onClick={() => setFilterOpen(!filterOpen)}
                       className="md:hidden"
@@ -91,17 +69,14 @@ const ProductPage = () => {
                       <label className="text-sm font-medium text-gray-700">
                         Category
                       </label>
-                      <div
-                        value={selectedCategory}
-                        onValueChange={setSelectedCategory}
-                        className="mt-2"
-                      >
+                      <div className="mt-2">
                         <div className="flex items-center space-x-2">
                           <input
                             type="radio"
                             value="all"
                             name="prd"
                             id="all"
+                            onChange={handleRadio}
                             checked={selectedCategory === "all"}
                           />
                           <label htmlFor="all">All Products</label>
@@ -112,6 +87,8 @@ const ProductPage = () => {
                             value="boxes"
                             id="boxes"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "boxes"}
                           />
                           <label htmlFor="boxes">Boxes</label>
                         </div>
@@ -121,6 +98,8 @@ const ProductPage = () => {
                             value="rolls"
                             id="rolls"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "rolls"}
                           />
                           <label htmlFor="rolls">Rolls</label>
                         </div>
@@ -130,6 +109,8 @@ const ProductPage = () => {
                             value="sheets"
                             id="sheets"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "sheets"}
                           />
                           <label htmlFor="sheets">Sheets & Pads</label>
                         </div>
@@ -139,6 +120,8 @@ const ProductPage = () => {
                             value="tapes"
                             id="tapes"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "tapes"}
                           />
                           <label htmlFor="tapes">Tapes</label>
                         </div>
@@ -148,6 +131,8 @@ const ProductPage = () => {
                             value="films"
                             id="films"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "films"}
                           />
                           <label htmlFor="films">Films</label>
                         </div>
@@ -157,6 +142,8 @@ const ProductPage = () => {
                             value="custom"
                             id="custom"
                             name="prd"
+                            onChange={handleRadio}
+                            checked={selectedCategory === "custom"}
                           />
                           <label htmlFor="custom">Custom Solutions</label>
                         </div>
@@ -178,6 +165,7 @@ const ProductPage = () => {
                         <img
                           // src={product.image}
                           src={"https://placehold.co/400x300/png"}
+                          loading="lazy"
                           alt={product.name}
                           width={400}
                           height={300}
@@ -187,10 +175,7 @@ const ProductPage = () => {
                           <h3 className="text-lg font-semibold mb-2">
                             {product.name}
                           </h3>
-                          <button
-                            variant="secondary"
-                            className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100"
-                          >
+                          <button className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100 mt-3">
                             Learn More <ChevronRight className="ml-2 h-4 w-4" />
                           </button>
                         </div>

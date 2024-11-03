@@ -7,7 +7,8 @@ import {
 import Home from "./pages/home";
 import Layout from "./layout";
 import ProductPage from "./pages/product-page";
-import Contact from "./pages/home/contact";
+import Contact from "./pages/contact";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,13 @@ const router = createBrowserRouter(
   )
 );
 
-const App = () => <RouterProvider router={router} />;
+const App = () => {
+  return (
+    <>
+      <RouterProvider router={router} />
+      <ToastContainer position="top-center" theme="light" />
+    </>
+  );
+};
 
 export default App;

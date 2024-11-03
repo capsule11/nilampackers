@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Menu, X, Send } from "lucide-react";
+import { useState } from "react";
+import { Send } from "lucide-react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Hero from "../../components/hero";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,33 +38,13 @@ const Contact = () => {
     toast.success("We will get back to you soon!");
   };
   return (
-    <div>
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden min-h-screen flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-              Get in Touch
-            </h1>
-            <p className="mt-6 text-xl max-w-2xl mx-auto">
-              Have a question or need a custom packaging solution? We're here to
-              help. Reach out to us and let's create something amazing together.
-            </p>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-auto"
-          >
-            <path
-              fill="#EBF8FF"
-              fillOpacity="1"
-              d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
-      </section>
+    <div className="flex-grow pt-16">
+      <Hero
+        title={"Get in Touch"}
+        description={`Have a question or need a custom packaging solution? We&apos;re
+              here to help. Reach out to us and let&apos;s create something
+              amazing together.`}
+      />
 
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,8 +53,10 @@ const Contact = () => {
               <div className="p-6 md:p-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name">Name</label>
+                    <div className="space-y-2 flex flex-col justify-center items-start">
+                      <label htmlFor="name" className="font-semibold">
+                        Name
+                      </label>
                       <input
                         id="name"
                         name="name"
@@ -81,10 +64,13 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleinputChange}
                         required
+                        className="w-full p-2 border border-gray-200 rounded-lg"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email">Email</label>
+                    <div className="space-y-2 flex flex-col justify-center items-start">
+                      <label htmlFor="email" className="font-semibold">
+                        Email
+                      </label>
                       <input
                         id="email"
                         name="email"
@@ -93,10 +79,13 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleinputChange}
                         required
+                        className="w-full p-2 border border-gray-200 rounded-lg"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="mobile">Mobile</label>
+                    <div className="space-y-2 flex flex-col justify-center items-start">
+                      <label htmlFor="mobile" className="font-semibold">
+                        Mobile
+                      </label>
                       <input
                         id="mobile"
                         name="mobile"
@@ -105,10 +94,13 @@ const Contact = () => {
                         value={formData.mobile}
                         onChange={handleinputChange}
                         required
+                        className="w-full p-2 border border-gray-200 rounded-lg"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="city">City</label>
+                    <div className="space-y-2 flex flex-col justify-center items-start">
+                      <label htmlFor="city" className="font-semibold">
+                        City
+                      </label>
                       <input
                         id="city"
                         name="city"
@@ -116,11 +108,14 @@ const Contact = () => {
                         value={formData.city}
                         onChange={handleinputChange}
                         required
+                        className="w-full p-2 border border-gray-200 rounded-lg"
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="requirements">Requirements</label>
+                  <div className="space-y-2 flex flex-col justify-center items-start">
+                    <label htmlFor="requirements" className="font-semibold">
+                      Requirements
+                    </label>
                     <textarea
                       id="requirements"
                       name="requirements"
@@ -128,19 +123,19 @@ const Contact = () => {
                       value={formData.requirements}
                       onChange={handleinputChange}
                       required
-                      className="min-h-[100px]"
+                      className="p-2 w-full min-h-[100px] max-h-[300px] border border-gray-200 rounded-lg"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white flex justify-center items-center gap-2 p-3 rounded-lg font-semibold"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       <span>Sending...</span>
                     ) : (
                       <>
-                        Send Message <Send className="ml-2 h-4 w-4" />
+                        Send Message <Send size={20} />
                       </>
                     )}
                   </button>
@@ -159,8 +154,8 @@ const Contact = () => {
                 Visit Our Office
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                We'd love to meet you in person. Drop by our office to discuss
-                your packaging needs or just to say hello!
+                We&apos;d love to meet you in person. Drop by our office to
+                discuss your packaging needs or just to say hello!
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -248,10 +243,10 @@ const Contact = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-200 transform -rotate-6 rounded-3xl"></div>
+              <div className="absolute inset-0 bg-blue-200 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1008.3308431407363!2d82.82111933171905!3d25.27650089331553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1730570051241!5m2!1sen!2sin"
-                width="600"
+                width="710"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen=""
