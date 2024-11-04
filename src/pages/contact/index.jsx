@@ -44,6 +44,7 @@ const Contact = () => {
         },
         (error) => {
           toast.error("Unable to send your message",error.text);
+          console.log(error);
         }
       );
   };
