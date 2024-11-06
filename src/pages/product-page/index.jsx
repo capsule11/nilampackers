@@ -2,6 +2,7 @@ import React from "react";
 import { ChevronRight, Filter } from "lucide-react";
 import products from "../../data/products";
 import Hero from "../../components/hero";
+import { Link } from "react-router-dom";
 
 const ProductPage = () => {
   const [filterOpen, setFilterOpen] = React.useState(false);
@@ -175,9 +176,12 @@ const ProductPage = () => {
                           <h3 className="text-lg font-semibold mb-2">
                             {product.name}
                           </h3>
-                          <button className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100 mt-3">
+                          <Link
+                            className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100 mt-3"
+                            to={product.name}
+                          >
                             Learn More <ChevronRight className="ml-2 h-4 w-4" />
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
