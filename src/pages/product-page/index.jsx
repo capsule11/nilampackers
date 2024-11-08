@@ -160,7 +160,7 @@ const ProductPage = () => {
                   {filteredProducts.map((product) => (
                     <div
                       key={product.id}
-                      className="bg-white rounded-lg text-blue-500 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                      className="bg-white rounded-lg text-blue-500 overflow-hidden hover:shadow-lg transition-shadow duration-300 border"
                     >
                       <div className="p-0">
                         <img
