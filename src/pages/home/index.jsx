@@ -124,12 +124,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-(#ebf8ff)">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6 text-blue-800">
-                Why Choose BoxCraft?
+                Why Choose Nilam Packers?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -180,7 +180,7 @@ const Home = () => {
               </button>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gray-200 transform -rotate-6 rounded-3xl"></div>
+              <div className="lg:w-[600px] lg:h-[400px] absolute inset-0 bg-gray-400 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
               <img
                 src="https://placehold.co/600x400/png"
                 alt="BoxCraft Facility"
