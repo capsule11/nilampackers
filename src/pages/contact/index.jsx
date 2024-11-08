@@ -165,7 +165,7 @@ const Contact = () => {
                 Visit Our Office
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                We&apos;d love to meet you in person. Drop by our office to
+                We would love to meet you in person. Drop by our office to
                 discuss your packaging needs or just to say hello!
               </p>
               <div className="space-y-4">
