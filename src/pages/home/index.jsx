@@ -51,7 +51,7 @@ const Home = () => {
                 Innovative, sustainable, and customized corrugated packaging to
                 elevate your brand and protect your products.
               </p>
-              <div className="flex space-x-4 m-24">
+              <div className="w-full font-semibold flex space-x-4 lg:m-24">
                 <button className="bg-white text-blue-600 hover:bg-blue-100 p-3 rounded-lg">
                   Explore Products
                 </button>
@@ -60,13 +60,13 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="relative overflow-auto lg:overflow-visible">
-              <div className="absolute inset-0 bg-blue-200 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
+            <div className="relative">
+              <div className="lg:w-[600px] lg:h-[400px] absolute inset-0 bg-blue-200 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
               <img
                 src="https://placehold.co/600x400/png"
                 alt="Innovative Packaging"
-                width={700}
-                height={300}
+                width={600}
+                height={400}
                 className="relative rounded-3xl shadow-2xl"
               />
             </div>
@@ -101,7 +101,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="aspect-w-16 aspect-h-9 mb-6">
                     <img
-                      src={"https://placehold.co/300x200/png"}
+                      src={"https://placehold.co/400x300/png"}
                       // src={product.image}
                       alt={product.name}
                       layout="fill"
