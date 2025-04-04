@@ -1,6 +1,15 @@
 import React from "react";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Package,
+  Recycle,
+  Shield,
+  Truck,
+  CheckCircle2,
+} from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const products = [
@@ -38,65 +47,108 @@ const Home = () => {
       logo: "/placeholder.svg?height=75&width=150",
     },
   ];
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <main className="flex-grow">
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white overflow-hidden min-h-[60dvh] xl:min-h-[80dvh] 2xl:min-h-[100dvh]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-                Packaging Solutions for the Modern World
-              </h1>
-              <p className="text-xl md:text-2xl font-light max-w-lg">
-                Innovative, sustainable, and customized corrugated packaging to
-                elevate your brand and protect your products.
-              </p>
-              <div className="w-full font-semibold flex space-x-4 lg:m-24">
-                <button className="bg-white text-blue-600 hover:bg-blue-100 p-3 rounded-lg">
-                  Explore Products
-                </button>
-                <button className="bg-white text-blue-600 hover:bg-blue-100 p-3 rounded-lg">
-                  Get in Touch
-                </button>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="lg:w-[600px] lg:h-[400px] absolute inset-0 bg-blue-200 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-3xl transform rotate-6"></div>
-              <img
-                src="https://placehold.co/600x400/png"
-                alt="Innovative Packaging"
-                width={600}
-                height={400}
-                className="relative rounded-3xl shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full h-auto"
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="max-w-3xl mx-auto text-center text-white"
           >
-            <path
-              fill="#EBF8FF"
-              fillOpacity="1"
-              d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
+            <motion.h1
+              variants={fadeIn}
+              className="text-5xl md:text-7xl font-bold leading-tight"
+            >
+              Packaging <span className="text-[#7CC1E3]">Reimagined</span>
+            </motion.h1>
+            <motion.p
+              variants={fadeIn}
+              className="mt-6 text-xl md:text-2xl font-light"
+            >
+              Innovative, sustainable, and customized corrugated packaging
+              solutions for the modern world.
+            </motion.p>
+            <motion.div
+              variants={fadeIn}
+              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <button
+                size="sm"
+                className="hidden md:inline-flex px-4 py-2 text-[#7CC1E3] bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
+              >
+                Explore Products
+              </button>
+              <button
+                size="sm"
+                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-[#7CC1E3] hover:bg-gray-200/90 border border-gray-200"
+              >
+                Get in Touch
+              </button>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+          >
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: window.innerHeight,
+                  behavior: "smooth",
+                });
+              }}
+              className="text-white flex flex-col items-center"
+            >
+              <span className="text-sm mb-2">Scroll to explore</span>
+              <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-1">
+                <motion.div
+                  animate={{ y: [0, 12, 0] }}
+                  transition={{
+                    repeat: Number.POSITIVE_INFINITY,
+                    duration: 1.5,
+                  }}
+                  className="w-1.5 h-1.5 bg-white rounded-full"
+                />
+              </div>
+            </button>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-(#ebf8ff)">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-800">
-            Our Products
-          </h2>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Packaging Solutions for Every Need
+            </h2>
+            <p className="text-xl text-gray-600">
+              Discover our wide range of high-quality packaging products
+              designed to protect, present, and deliver your products with
+              excellence.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg text-blue-500 overflow-hidden border"
+                className="group hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg text-black-500 overflow-hidden border"
               >
                 <div className="p-6">
                   <div className="aspect-w-16 aspect-h-9 mb-6">
@@ -112,7 +164,7 @@ const Home = () => {
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <Link
-                    className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100 mt-3"
+                    className="w-full flex p-2 rounded-lg justify-center items-center text-white bg-[#1D5D7B] mt-3"
                     to={product.name}
                   >
                     Learn More <ChevronRight className="ml-2 h-4 w-4" />
@@ -121,23 +173,34 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          <div className="mt-16 text-center justify-self-center">
+            <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
+              View All Products <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-blue-800">
-                Why Choose BoxCraft?
+              <h2 className="text-4xl font-bold mb-6 text-black-800">
+                Why Choose Nilam Packers?
               </h2>
-              <div className="space-y-4">
+              <p className="text-xl text-gray-600 mb-8">
+                At Nilam Packers, we combine innovative design, sustainable
+                materials, and cutting-edge technology to deliver packaging
+                solutions that exceed expectations.
+              </p>
+              <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold mr-4">
-                    1
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <Package className="h-6 w-6 text-[#1d5d7b]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-blue-500">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">
                       Custom Solutions
                     </h3>
                     <p className="text-gray-600">
@@ -147,11 +210,11 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold mr-4">
-                    2
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                    <Recycle className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-blue-500">
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">
                       Sustainability Focus
                     </h3>
                     <p className="text-gray-600">
@@ -161,28 +224,45 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold mr-4">
-                    3
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <Truck className="h-6 w-6 text-[#1d5d7b]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-blue-500">
-                      Cutting-edge Technology
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                      Reliable Delivery
                     </h3>
                     <p className="text-gray-600">
-                      State-of-the-art manufacturing facilities ensuring
-                      precision, efficiency, and consistent quality.
+                      On-time production and delivery to keep your supply chain
+                      running smoothly.
+                    </p>
+                  </div>
+                </div>
+                 
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                    <Shield className="h-6 w-6 text-[#1d5d7b]" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                      Quality Assurance
+                    </h3>
+                    <p className="text-gray-600">
+                      Rigorous testing and quality control to ensure every
+                      product meets our high standards.
                     </p>
                   </div>
                 </div>
               </div>
-              <button className="mt-8 bg-blue-500 text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
+
+              <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
                 Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
+
             <div className="relative">
-              <div className="absolute inset-0 bg-gray-200 transform -rotate-6 rounded-3xl"></div>
+              <div className="lg:w-[600px] lg:h-[600px] absolute inset-0 bg-[#a0d7f0] bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-3xl transform -rotate-6"></div>
               <img
-                src="https://placehold.co/600x400/png"
+                src="https://placehold.co/600x600/png"
                 alt="BoxCraft Facility"
                 width={600}
                 height={400}
@@ -195,9 +275,15 @@ const Home = () => {
 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-800">
-            Our Trusted Partners
-          </h2>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl opacity-90">
+              Don't just take our word for it. Here's what our clients have to
+              say about working with BoxCraft.
+            </p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             {partners.map((partner, index) => (
               <div key={index} className="flex justify-center">
@@ -210,6 +296,47 @@ const Home = () => {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-[rgba(255,255,255,0.4)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[8.5px] rounded-[10px] border border-[rgba(255,255,255,0.18)] p-6">
+              <div className="grid md:grid-cols-2 gap-8 items-center"></div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Ready to Elevate Your Packaging?
+                </h2>
+                <p className="text-xl opacity-90 mb-6">
+                  Let's create packaging solutions that protect your products
+                  and elevate your brand.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center">
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <span>Custom design and prototyping</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <span>Sustainable and eco-friendly options</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <span>Fast turnaround times</span>
+                  </li>
+                </ul>
+                <button
+                  size="lg"
+                  className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-[#7CC1E3] hover:bg-[#dfeaf0] border border-gray-200"
+                >
+                  Get Your Free Quote Today
+                </button>
+                
+              </div>
+              
+            </div>
           </div>
         </div>
       </section>

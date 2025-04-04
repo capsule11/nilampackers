@@ -11,6 +11,8 @@ import Contact from "./pages/contact";
 import { ToastContainer } from "react-toastify";
 import Specs from "./pages/product-page/specs";
 import NotFoundPage from "./pages/page-not-found";
+// import AboutPage from "./pages/about";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
       <Route path="products/:prdName" element={<Specs />} />
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<NotFoundPage />} />
+      {/* <Route path="about" element={<AboutPage />} /> */}
+
     </Route>
   )
 );

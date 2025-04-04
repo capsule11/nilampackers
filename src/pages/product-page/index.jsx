@@ -164,8 +164,8 @@ const ProductPage = () => {
                     >
                       <div className="p-0">
                         <img
-                          // src={product.image}
-                          src={"https://placehold.co/400x300/png"}
+                          // src="./Image/img.png"
+                          src={product.image}
                           loading="lazy"
                           alt={product.name}
                           width={400}

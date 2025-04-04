@@ -2,9 +2,9 @@ const products = [
   {
     id: 1,
     name: "Corrugated Boxes",
-    image: "https://placehold.co/400x300/png",
+    image: "./Image/img.png",
     category: "boxes",
-    productImage: "https://placehold.co/600x400",
+    productImage: "./Image/img.png",
     productDescription:
       "Our standard corrugated boxes offer superior protection and versatility for all your packaging needs.",
     specifications: [
@@ -30,7 +30,7 @@ const products = [
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "./Image/img.png",
       },
       {
         name: "Printed Corrugated Boxes",
