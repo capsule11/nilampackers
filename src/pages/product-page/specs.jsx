@@ -9,6 +9,7 @@ const Specs = () => {
   const prdName = params.prdName;
 
   const product = products.find((item) => item.name === prdName);
+  console.log(product)
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,7 +18,7 @@ const Specs = () => {
   return (
     <ProductLayout
       productName={product.name}
-      productImage="https://placehold.co/600x400"
+      productImage={product.image}
       productDescription={product.productDescription}
       specifications={product.specifications}
       features={product.features}
@@ -25,5 +26,4 @@ const Specs = () => {
     />
   );
 };
-
 export default Specs;
