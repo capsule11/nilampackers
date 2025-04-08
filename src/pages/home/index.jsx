@@ -153,8 +153,7 @@ const Home = () => {
                 <div className="p-6">
                   <div className="aspect-w-16 aspect-h-9 mb-6">
                     <img
-                      src={"https://placehold.co/400x300/png"}
-                      // src={product.image}
+                      src="./public/Image/img.png"                   // src={product.image}
                       alt={product.name}
                       layout="fill"
                       objectFit="cover"

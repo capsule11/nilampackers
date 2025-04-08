@@ -170,7 +170,7 @@ const ProductPage = () => {
                           alt={product.name}
                           width={400}
                           height={300}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-full p-4"
                         />
                         <div className="p-4 my-4">
                           <h3 className="text-lg font-semibold mb-2">
