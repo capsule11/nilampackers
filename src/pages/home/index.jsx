@@ -148,22 +148,22 @@ const Home = () => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg text-black-500 overflow-hidden border"
+                className="group hover:shadow-xl transition-shadow duration-300 bg-white rounded-lg text-black-500 overflow-hidden border h-[27rem] flex flex-col justify-between items-center"
               >
-                <div className="p-6">
-                  <div className="aspect-w-16 aspect-h-9 mb-6">
-                    <img
-                      src="./public/Image/img.png"                   // src={product.image}
-                      alt={product.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-lg"
-                    />
-                  </div>
+                <div className="aspect-w-16 aspect-h-9">
+                  <img
+                    src="./public/Image/img.png"                   // src={product.image}
+                    alt={product.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="px-6 flex flex-col justify-center items-center w-full">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <Link
-                    className="w-full flex p-2 rounded-lg justify-center items-center text-white bg-[#1D5D7B] mt-3"
+                    className="w-full flex p-2 rounded-lg justify-center items-center text-white bg-[#1D5D7B] mt-auto mb-4"
                     to={product.name}
                   >
                     Learn More <ChevronRight className="ml-2 h-4 w-4" />
@@ -236,7 +236,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                 
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
                     <Shield className="h-6 w-6 text-[#1d5d7b]" />
@@ -332,9 +332,9 @@ const Home = () => {
                 >
                   Get Your Free Quote Today
                 </button>
-                
+
               </div>
-              
+
             </div>
           </div>
         </div>
