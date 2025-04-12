@@ -18,9 +18,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full flex items-center justify-between">
@@ -28,9 +27,8 @@ const Navbar = () => {
             <Link to="/">
               <span className="sr-only">Nilam Packers</span>
               <div
-                className={`text-2xl font-bold ${
-                  scrolled ? "text-blue-600" : "text-gray-900"
-                }`}
+                className={`text-2xl font-bold ${scrolled ? "text-blue-600" : "text-white"
+                  }`}
               >
                 Nilam Packers
               </div>
@@ -39,33 +37,29 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             <Link
               to="/"
-              className={`text-base font-medium ${
-                scrolled ? "text-gray-700" : "text-gray-900"
-              } hover:text-blue-600`}
+              className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
             >
               Home
             </Link>
             <Link
               to="/products"
-              className={`text-base font-medium ${
-                scrolled ? "text-gray-700" : "text-gray-900"
-              } hover:text-blue-600`}
+              className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
             >
               Products
             </Link>
             <Link
               to="/about"
-              className={`text-base font-medium ${
-                scrolled ? "text-gray-700" : "text-gray-900"
-              } hover:text-blue-600`}
+              className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className={`text-base font-medium ${
-                scrolled ? "text-gray-700" : "text-gray-900"
-              } hover:text-blue-600`}
+              className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
             >
               Contact
             </Link>
@@ -83,9 +77,8 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <Menu
-                className={`h-6 w-6 ${
-                  scrolled ? "text-gray-700" : "text-gray-900"
-                }`}
+                className={`h-6 w-6 ${scrolled ? "text-gray-700" : "text-white"
+                  }`}
               />
             </button>
           </div>
