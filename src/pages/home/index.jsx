@@ -15,7 +15,7 @@ const Home = () => {
   const products = [
     {
       name: "Custom Boxes",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "./Image/img.png",
       description: "Tailored to your exact specifications",
     },
     {
