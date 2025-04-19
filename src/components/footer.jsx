@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-[#111827] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">About Nilam Packers</h3>
-            <p className="text-blue-200">
+            <p className="text-gray-400">
               Innovative corrugated packaging solutions for businesses of all
               sizes. Committed to quality, sustainability, and customer
               satisfaction.
@@ -19,7 +19,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/products"
-                  className="text-blue-200 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Products
                 </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-blue-200 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   About Us
                 </Link>
@@ -35,7 +35,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/sustainability"
-                  className="text-blue-200 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Sustainability
                 </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-blue-200 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Contact
                 </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-2 text-blue-200">
+            <ul className="space-y-2 text-gray-400">
               <li>1234 Packaging Lane</li>
               <li>Boxville, BX 56789</li>
               <li>Phone: (555) 123-4567</li>
@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 to="#"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <span className="sr-only">Facebook</span>
                 <svg
@@ -82,7 +82,7 @@ const Footer = () => {
               </a>
               <a
                 to="#"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -100,7 +100,7 @@ const Footer = () => {
               </a>
               <a
                 to="#"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -114,7 +114,7 @@ const Footer = () => {
               </a>
               <a
                 to="#"
-                className="text-blue-200 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg
@@ -134,9 +134,27 @@ const Footer = () => {
           </div>
         </div>
         <div className="my-8 bg-blue-800" />
-        <div className="text-center text-blue-200">
-          <p>&copy; 2024 Nilam Packers. All rights reserved.</p>
-        </div>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} BoxCraft. All rights reserved.</p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-of-service"
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
+                Terms of Service
+              </Link>
+              <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+                Sitemap
+              </Link>
+            </div>
+          </div>
       </div>
     </footer>
   );
