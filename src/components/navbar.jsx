@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+
+  const location = useLocation()
+  console.log(location);
+
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -18,16 +23,17 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : location.pathname === '/' ? "bg-[#4E606B] py-2" : "bg-[#2D799E] py-2"
         }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/">
+            <Link to="/" className="flex justify-center items-center gap-1">
+              <img src={scrolled ? "../../public/Image/icon_light.png" : "../../public/Image/icon_dark.png"} width={60} height={60} />
               <span className="sr-only">Nilam Packers</span>
               <div
-                className={`text-2xl font-bold ${scrolled ? "text-blue-600" : "text-white"
+                className={`text-2xl font-bold ${scrolled ? "text-black" : "text-white"
                   }`}
               >
                 Nilam Packers
