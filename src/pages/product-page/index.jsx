@@ -221,7 +221,7 @@ const ProductPage = () => {
                             {product.name}
                           </h3>
                           <Link
-                            className="w-full flex p-2 rounded-lg justify-center items-center text-black bg-gray-100 mt-3"
+                            className="w-full flex p-2 rounded-lg justify-center items-center text-white bg-[#1D5D7B] mt-3"
                             to={product.name}
                           >
                             Learn More <ChevronRight className="ml-2 h-4 w-4" />
