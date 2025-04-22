@@ -1,41 +1,18 @@
 import React from "react";
 import {
   ArrowRight,
-  ChevronRight,
   Package,
   Recycle,
   Shield,
   Truck,
   CheckCircle2,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import OdometerCounter from "../../components/odometercounter";
+import { ExpandableCardDemo } from "./card";
+
 
 const Home = () => {
-  const products = [
-    {
-      name: "Custom Boxes",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Tailored to your exact specifications",
-    },
-    {
-      name: "Eco-Friendly Packaging",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Sustainable solutions for conscious brands",
-    },
-    {
-      name: "Retail Packaging",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Stand out on the shelves",
-    },
-    {
-      name: "Shipping Supplies",
-      image: "/placeholder.svg?height=200&width=300",
-      description: "Ensure safe delivery every time",
-    },
-  ];
-
   const partners = [
     { name: "EcoMaterials Inc.", logo: "/placeholder.svg?height=75&width=150" },
     { name: "LogisticsPro", logo: "/placeholder.svg?height=75&width=150" },
@@ -145,7 +122,7 @@ const Home = () => {
               excellence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <div
                 key={index}
@@ -153,7 +130,9 @@ const Home = () => {
               >
                 <div className="aspect-w-16 aspect-h-9">
                   <img
-                    src="./public/Image/img.png" // src={product.image}
+
+                    src="./Image/img.png"                   // src={product.image}
+
                     alt={product.name}
                     layout="fill"
                     objectFit="cover"
@@ -172,8 +151,9 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+
+          </div> */}
+          <ExpandableCardDemo/>
 
         <div className="mt-16 text-center justify-self-center">
           <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
@@ -295,6 +275,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Number counter section*/}
 
       <section className="flex-col flex lg:flex-row justify-center items-center text-center gap-20 py-16 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-white">
@@ -313,6 +294,7 @@ const Home = () => {
       </section>
 
       <section className="py-24 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-white">
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-[rgba(255,255,255,0.4)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[8.5px] rounded-[10px] border border-[rgba(255,255,255,0.18)] p-6">
@@ -341,7 +323,7 @@ const Home = () => {
                 </ul>
                 <button
                   size="lg"
-                  className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-[#7CC1E3] hover:bg-[#dfeaf0] border border-gray-200"
+                  className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-black hover:bg-[#dfeaf0] border border-gray-200"
                 >
                   Get Your Free Quote Today
                 </button>
