@@ -293,7 +293,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-white">
+      <section className="py-24 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-black">
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -309,21 +309,21 @@ const Home = () => {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Custom design and prototyping</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Sustainable and eco-friendly options</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Fast turnaround times</span>
                   </li>
                 </ul>
                 <button
                   size="lg"
-                  className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-black hover:bg-[#dfeaf0] border border-gray-200"
+                  className="hidden md:inline-flex px-4 py-2 bg-black rounded-lg text-white hover:bg-gray-900"
                 >
                   Get Your Free Quote Today
                 </button>
