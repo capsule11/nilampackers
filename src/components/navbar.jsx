@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="w-full flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex justify-center items-center gap-1">
-              <img src={scrolled ? "../../public/Image/icon_light.png" : "../../public/Image/icon_dark.png"} width={60} height={60} />
+              <img src={scrolled ? "./Image/icon_light.png" : "./Image/icon_dark.png"} width={60} height={60} />
               <span className="sr-only">Nilam Packers</span>
               <div
                 className={`text-2xl font-bold ${scrolled ? "text-black" : "text-white"

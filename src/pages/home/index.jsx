@@ -152,7 +152,7 @@ const Home = () => {
               >
                 <div className="aspect-w-16 aspect-h-9">
                   <img
-                    src="./public/Image/img.png"                   // src={product.image}
+                    src="./Image/img.png"                   // src={product.image}
                     alt={product.name}
                     layout="fill"
                     objectFit="cover"
