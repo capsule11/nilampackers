@@ -111,7 +111,7 @@ export function ExpandableCardDemo() {
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col rounded-xl text-black overflow-hidden hover:shadow-lg transition-shadow duration-300 border cursor-pointer"
+            className="p-4 flex flex-col rounded-xl text-black overflow-hidden hover:shadow-xl transition-shadow duration-300 border cursor-pointer"
           >
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -175,7 +175,7 @@ export const CloseIcon = () => {
 const cards = [
   {
     title: "Custom Box",
-    src: "./Image/f3.png",
+    src: "./Image/CustomBox.png",
 
     content: () => {
       return (
@@ -193,7 +193,7 @@ const cards = [
   },
   {
     title: "Eco-Friendly Packaging",
-    src: "./Image/f3.png",
+    src: "./Image/EcoFriendlyBanner.png",
 
     content: () => {
       return (
@@ -208,30 +208,35 @@ const cards = [
   },
 
   {
-    title: "Retail Packaging",
-    src: "./Image/f3.png",
+    title: "Food-Grade Packaging",
+    src: "./Image/FoodGrade.png",
 
     content: () => {
       return (
         <p>
-          Make a lasting first impression on the shelves. Our retail packaging
-          is designed to be both attractive and functional, offering a premium
-          look while ensuring your product stays safe. Ideal for FMCG,
-          electronics, apparel, and more.
+          Ensure safety, freshness, and hygiene with our certified food-grade
+          corrugated packaging solutions. Whether you're delivering baked goods,
+          meal kits, or perishable items, our boxes are designed to meet strict
+          quality standards while keeping your food products protected. We use
+          non-toxic, odor-free materials that are safe for direct contact with
+          consumables, helping your brand earn the trust of your customers with
+          every delivery.
         </p>
       );
     },
   },
   {
-    title: "Shipping Supplies",
-    src: "./Image/f3.png",
+    title: "Printed Packaging",
+    src: "./Image/Printed.png",
     content: () => {
       return (
         <p>
-          Everything you need to keep your shipments safe and secure. From
-          sturdy corrugated boxes to protective fillers and tape, our shipping
-          supplies are made to handle the rigors of transit and ensure your
-          goods reach their destination intact.
+          Make your brand stand out with custom-printed corrugated boxes
+          tailored to your identity. From logos and product information to
+          vibrant, full-color designs — our printed packaging enhances customer
+          experience while boosting brand recognition. Whether you're launching
+          a product or shipping retail goods, our high-quality printing ensures
+          every box tells your brand’s story with clarity and style.
         </p>
       );
     },
