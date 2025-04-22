@@ -154,7 +154,7 @@ const Home = () => {
 
           </div> */}
           <ExpandableCardDemo/>
-
+        </div>
         <div className="mt-16 text-center justify-self-center">
           <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
             View All Products <ArrowRight className="ml-2 h-4 w-4" />
