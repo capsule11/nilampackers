@@ -51,12 +51,12 @@ const ProductPage = () => {
                     className={`${filterOpen ? "block" : "hidden"} md:block`}
                   >
                     <div className="mb-4 flex flex-col">
-                      <label
+                      {/* <label
                         htmlFor="search"
-                        className="text-sm font-medium text-gray-700"
+                        className="text-sm font-semibold text-gray-700"
                       >
                         Search
-                      </label>
+                      </label> */}
                       <input
                         type="text"
                         id="search"
