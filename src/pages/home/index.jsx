@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { ExpandableCardDemo } from "./card";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const partners = [
@@ -61,18 +62,20 @@ const Home = () => {
               variants={fadeIn}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <button
+              <Link
+                to={'/products'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 text-[#7CC1E3] bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 text-blue-600 bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
               >
                 Explore Products
-              </button>
-              <button
+              </Link>
+              <Link
+                to={'/contact'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-[#7CC1E3] hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-blue-600 hover:bg-gray-200/90 border border-gray-200"
               >
                 Get in Touch
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -148,15 +151,15 @@ const Home = () => {
               </div>
             ))}
           </div> */}
-          <ExpandableCardDemo/>
-          
+          <ExpandableCardDemo />
 
-          
+
+
 
           <div className="mt-16 text-center justify-self-center">
-            <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
+            <Link to={'/products'} className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
               View All Products <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -233,9 +236,9 @@ const Home = () => {
                 </div>
               </div>
 
-              <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
+              <Link to={'/about'} className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
                 Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
+              </Link>
             </div>
 
             <div className="relative">
@@ -306,12 +309,13 @@ const Home = () => {
                     <span>Fast turnaround times</span>
                   </li>
                 </ul>
-                <button
+                <Link
+                  to={'/contact'}
                   size="lg"
                   className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-black hover:bg-[#dfeaf0] border border-gray-200"
                 >
                   Get Your Free Quote Today
-                </button>
+                </Link>
 
               </div>
 

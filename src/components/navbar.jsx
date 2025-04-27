@@ -71,12 +71,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex items-center">
-            <button
+            <Link
+              to={'/contact'}
               size="sm"
               className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
             >
               Get a Quote
-            </button>
+            </Link>
             <button
               size="icon"
               className="md:hidden"
@@ -139,9 +140,9 @@ const Navbar = () => {
                       >
                         Contact
                       </Link>
-                      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg">
+                      <Link to={'/contact'} className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg">
                         Get a Quote
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
