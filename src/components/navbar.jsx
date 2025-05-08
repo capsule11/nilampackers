@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : location.pathname === '/' ? "bg-[#4E606B] py-2" : "bg-[#2D799E] py-2"
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-2" : location.pathname === '/' ? "bg-none py-2" : "bg-[#2D799E] py-2"
         }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
@@ -44,28 +44,28 @@ const Navbar = () => {
             <Link
               to="/"
               className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
-                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'} ${location.pathname === '/' && 'font-semibold'}`}
             >
               Home
             </Link>
             <Link
               to="/products"
               className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
-                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'} ${location.pathname === '/' && 'font-semibold'}`}
             >
               Products
             </Link>
             <Link
               to="/about"
               className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
-                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'} ${location.pathname === '/' && 'font-semibold'}`}
             >
               About
             </Link>
             <Link
               to="/contact"
               className={`text-base font-medium ${scrolled ? "text-gray-700" : "text-white"
-                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'}`}
+                } ${scrolled ? 'hover:text-blue-600' : 'hover:underline'} ${location.pathname === '/' && 'font-semibold'}`}
             >
               Contact
             </Link>

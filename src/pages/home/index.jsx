@@ -37,7 +37,9 @@ const Home = () => {
 
   return (
     <main className="flex-grow">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]">
+      <section className="bg-[url(./Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
+        {/* <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]"> */}
+        {/* <div className="relative z-[9999] flex items-center justify-center h-full"> */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial="hidden"
@@ -53,7 +55,7 @@ const Home = () => {
             </motion.h1>
             <motion.p
               variants={fadeIn}
-              className="mt-6 text-xl md:text-2xl font-light"
+              className="mt-6 text-xl md:text-2xl font-semibold"
             >
               Innovative, sustainable, and customized corrugated packaging
               solutions for the modern world.
@@ -109,6 +111,7 @@ const Home = () => {
             </button>
           </motion.div>
         </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
       </section>
 
       <section className="py-20 bg-(#ebf8ff)">
