@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowRight,
   Package,
@@ -10,8 +10,13 @@ import {
 import { motion } from "framer-motion";
 import { ExpandableCardDemo } from "./card";
 import { Link } from "react-router-dom";
+import { getWhyChooseUsImg } from "../../sanity-client/queries/homepage";
+
 
 const Home = () => {
+  const [whyChooseUsImg, setWhyChooseUsImg] = useState('')
+  console.log(whyChooseUsImg);
+
   const partners = [
     { name: "EcoMaterials Inc.", logo: "/placeholder.svg?height=75&width=150" },
     { name: "LogisticsPro", logo: "/placeholder.svg?height=75&width=150" },
@@ -34,6 +39,13 @@ const Home = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
+
+  useEffect(() => {
+    (async () => {
+      const data = await getWhyChooseUsImg()
+      setWhyChooseUsImg(data)
+    })()
+  }, [])
 
   return (
     <main className="flex-grow">
@@ -247,7 +259,7 @@ const Home = () => {
             <div className="relative">
               <div className="lg:w-[600px] lg:h-[600px] absolute inset-0 bg-[#a0d7f0] bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-3xl transform -rotate-6"></div>
               <img
-                src="https://placehold.co/600x600/png"
+                src={whyChooseUsImg}
                 alt="BoxCraft Facility"
                 width={600}
                 height={400}
