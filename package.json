@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@sanity/client": "^7.1.0",
+    "@sanity/image-url": "^1.1.0",
     "framer-motion": "^12.6.2",
     "lucide-react": "^0.454.0",
     "package": "^1.0.1",
