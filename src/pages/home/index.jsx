@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <main className="flex-grow">
-      <section className="bg-[url(./Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
+      <section className="bg-[url(../../public/Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
         {/* <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]"> */}
         {/* <div className="relative z-[9999] flex items-center justify-center h-full"> */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -312,15 +312,15 @@ const Home = () => {
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Custom design and prototyping</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Sustainable and eco-friendly options</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle2 className="h-5 w-5 mr-2 text-blue-300" />
+                    <CheckCircle2 className="h-5 w-5 mr-2 text-black" />
                     <span>Fast turnaround times</span>
                   </li>
                 </ul>
