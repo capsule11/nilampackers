@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <main className="flex-grow">
-      <section className="bg-[url(../../public/Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
+      <section className="bg-[url(/Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
         {/* <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]"> */}
         {/* <div className="relative z-[9999] flex items-center justify-center h-full"> */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
