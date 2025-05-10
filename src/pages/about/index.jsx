@@ -8,7 +8,7 @@ function About() {
     <>
       {/* #2d799e #8f7a64 brown*/}
 
-      <section className='bg-[#8f7a64] bg-gradient-to-r from-black/60 via-black/40 to-black/20 pt-12 md:pt-16 lg:pt-0'>
+      <section className='bg-[#2D799E] pt-12 md:pt-16 lg:pt-0'>
         <main className=' flex lg:flex-row flex-col items-center justify-center lg:gap-32  lg:h-screen relative'    >
 
           {/* text-sm lg:text-left md:text-[1rem] lg:text-[1rem] */}
