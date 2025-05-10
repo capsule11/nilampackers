@@ -259,7 +259,7 @@ const Home = () => {
             <div className="relative">
               <div className="lg:w-[600px] lg:h-[600px] absolute inset-0 bg-[#a0d7f0] bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-3xl transform -rotate-6"></div>
               <img
-                src={whyChooseUsImg}
+                src="/Image/WhyChoose.png"
                 alt="BoxCraft Facility"
                 width={600}
                 height={400}

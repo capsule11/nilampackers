@@ -2,9 +2,9 @@ const products = [
   {
     id: 1,
     name: "Corrugated Boxes",
-    image: "./Image/img.png",
+    image: "/Image/ProductImages/CorrugatedBox.png",
     category: "boxes",
-    productImage: "./Image/img.png",
+    productImage: "",
     productDescription:
       "Our standard corrugated boxes offer superior protection and versatility for all your packaging needs.",
     specifications: [
@@ -45,7 +45,7 @@ const products = [
   {
     id: 2,
     name: "3 Ply Corrugated Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/3_Ply.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -88,7 +88,7 @@ const products = [
   {
     id: 3,
     name: "5 Ply Corrugated Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/5_Ply.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -131,7 +131,7 @@ const products = [
   {
     id: 4,
     name: "7 Ply Corrugated Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/7_Ply.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -174,7 +174,7 @@ const products = [
   {
     id: 5,
     name: "9 Ply Corrugated Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/9_Ply.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -217,7 +217,7 @@ const products = [
   {
     id: 6,
     name: "Printed Corrugated Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/Printed.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -260,7 +260,7 @@ const products = [
   {
     id: 7,
     name: "Mono Carton Boxes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/MonoBox.png",
     category: "boxes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -303,7 +303,7 @@ const products = [
   {
     id: 8,
     name: "Corrugated Rolls",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/CorrugatedRolls.png",
     category: "rolls",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -346,7 +346,7 @@ const products = [
   {
     id: 9,
     name: "Corrugated Pads & Sheets",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/CorrugatedPadSheets.png",
     category: "sheets",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -389,7 +389,7 @@ const products = [
   {
     id: 10,
     name: "BOPP Tapes",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/BOPPTapes.png",
     category: "tapes",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -432,7 +432,7 @@ const products = [
   {
     id: 11,
     name: "Stretch Films",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/StretchFilms.png",
     category: "films",
     productImage: "https://placehold.co/600x400",
     productDescription:
@@ -475,7 +475,7 @@ const products = [
   {
     id: 12,
     name: "Custom Packaging Solutions",
-    image: "/placeholder.svg",
+    image: "/Image/ProductImages/Custom.png",
     category: "custom",
     productImage: "https://placehold.co/600x400",
     productDescription:
