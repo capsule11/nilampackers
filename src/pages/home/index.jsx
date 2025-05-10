@@ -8,9 +8,11 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import OdometerCounter from "../../components/odometercounter";
 import { ExpandableCardDemo } from "./card";
 import { Link } from "react-router-dom";
 import { getWhyChooseUsImg } from "../../sanity-client/queries/homepage";
+
 
 
 const Home = () => {
@@ -146,7 +148,9 @@ const Home = () => {
               >
                 <div className="aspect-w-16 aspect-h-9">
                   <img
+
                     src="./Image/img.png"                   // src={product.image}
+
                     alt={product.name}
                     layout="fill"
                     objectFit="cover"
@@ -165,7 +169,9 @@ const Home = () => {
                 </div>
               </div>
             ))}
+
           </div> */}
+
           <ExpandableCardDemo />
 
 
@@ -176,6 +182,7 @@ const Home = () => {
               View All Products <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
+
         </div>
       </section>
 
@@ -270,26 +277,21 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Our Clients Say
+              Our Partners
             </h2>
-            <p className="text-xl opacity-90">
-              Don't just take our word for it. Here's what our clients have to
-              say about working with BoxCraft.
-            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {partners.map((partner, index) => (
+
+          <div className="flex gap-20 items-center animate-infinite-scroll ">
+            {[...partners, ...partners, ...partners].map((partner, index) => (
               <div key={index} className="flex justify-center">
                 <img
                   src={"https://placehold.co/150x75/png"}
                   alt={partner.name}
-                  width={150}
-                  height={75}
-                  className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="min-w-[150px] opacity-60 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -297,7 +299,26 @@ const Home = () => {
         </div>
       </section>
 
+
+      {/* Number counter section*/}
+
+      <section className="flex-col flex lg:flex-row justify-center items-center text-center gap-20 py-16 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-white">
+        <div>
+          <OdometerCounter value={47} showPlus={true} />
+          <h2>Years of Experience</h2>
+        </div>
+        <div>
+          <OdometerCounter value={100} showPlus={true} />
+          <h2>Global Customers</h2>
+        </div>
+        <div>
+          <OdometerCounter value={5000} />
+          <h2 className="font-semibold">Tons of corrugated boxes</h2>
+        </div>
+      </section>
+
       <section className="py-24 bg-gradient-to-r from-[#2C789D] to-[#13435C] text-black">
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-[rgba(255,255,255,0.4)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[8.5px] rounded-[10px] border border-[rgba(255,255,255,0.18)] p-6">
@@ -327,13 +348,13 @@ const Home = () => {
                 <Link
                   to={'/contact'}
                   size="lg"
-                  className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-black hover:bg-[#dfeaf0] border border-gray-200"
+                  className="hidden md:inline-flex px-4 py-2 bg-black rounded-lg text-white hover:bg-gray-900"
                 >
                   Get Your Free Quote Today
+
                 </Link>
 
               </div>
-
             </div>
           </div>
         </div>
