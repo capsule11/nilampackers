@@ -1,13 +1,14 @@
 import React from 'react'
 import { motion } from "framer-motion";
-
+import Timeline from '../../components/Timeline';
+import Team from '../../components/team';
 
 function About() {
   return (
     <>
-   {/* #2d799e */}
+   {/* #2d799e #8f7a64 brown*/}
 
-   <section className='bg-[#2d799e] pt-12 md:pt-16 lg:pt-0'>
+   <section className='bg-[#8f7a64] bg-gradient-to-r from-black/60 via-black/40 to-black/20 pt-12 md:pt-16 lg:pt-0'>
     <main className=' flex lg:flex-row flex-col items-center justify-center lg:gap-32  lg:h-screen relative'    >
 
     {/* text-sm lg:text-left md:text-[1rem] lg:text-[1rem] */}
@@ -37,7 +38,7 @@ function About() {
     <img className='w-96 mt-32 drop-shadow-xl absolute '   style={{ filter: 'drop-shadow(4px 4px 15px rgba(0,0,0,0.5))' }} src="Image/box.png" alt="" />
     <img className='w-96 mt-32 drop-shadow-xl absolute z-30 '   style={{ filter: 'drop-shadow(4px 4px 15px rgba(0,0,0,0.5))' }} src="Image/box-over.png" alt="" />
     </div>
-    <div className='absolute bottom-2'>
+    <div className='absolute bottom-10'>
     <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -68,12 +69,43 @@ function About() {
     </div>
     </main>
     </section>
-    <div className='bg-[#254858] w-full h-[30px] lg:hidden'></div>
+    <div className='bg-[#2d799e] w-full h-[30px] lg:hidden'></div>
 
 
-    <div id='content'>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptatem vitae obcaecati temporibus, beatae ea dignissimos nesciunt ipsam corporis dolorem alias quasi sint earum saepe, fuga quae voluptatum ut optio? Unde fuga repudiandae facere eveniet possimus explicabo animi reprehenderit odit, ipsa ut aut dolores pariatur, doloribus amet distinctio porro nesciunt magnam tempore ex sit voluptatibus! Quaerat unde repellendus magnam ratione sequi quam, velit voluptas eius, ipsa error accusantium quo maxime fugiat quisquam. Fugiat porro aspernatur delectus, quam blanditiis, maiores omnis, cumque incidunt nemo harum quidem! Aspernatur ullam odit quod saepe velit id. Praesentium culpa est officiis numquam, ipsum sapiente optio.</p>
+<div className="flex justify-center py-12 text-[1rem]">
+  <div className="relative flex flex-col items-center text-center text-white py-8 w-4/5 border rounded-3xl bg-cover bg-center bg-[url('/Image/mission.webp')] backdrop-blur-sm overflow-hidden">
+
+    {/* Black gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/60 to-black/10
+"></div>
+
+    {/* Content on top of overlay */}
+    <div className="relative z-10 flex flex-col items-center ">
+      <h1 className="font-bold text-4xl pb-2">Our Mission</h1>
+      <h2 className="text-2xl w-3/5">
+        To provide innovative, sustainable packaging solutions that protect products,
+        enhance brands, and minimize environmental impact while exceeding our customers' expectations.
+      </h2>
+    </div>
+
   </div>
+</div>
+
+
+
+
+<div>
+    <div className="px-6 py-12 max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold mb-8 text-center">Our Journey</h2>
+      <Timeline />
+    </div>
+    </div>
+
+
+<div>
+  <Team />
+</div>
+
     </>
   )
 }
