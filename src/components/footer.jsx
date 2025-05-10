@@ -53,10 +53,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>1234 Packaging Lane</li>
-              <li>Boxville, BX 56789</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: info@boxcraft.com</li>
+              <li>Address: Village Mahendiganj, Saidapar,</li>
+              <li>P.O.: Rajatalab, Varanasi - 221311</li>
+              <li>Phone: +91 9839145898, +91 9984444074</li>
+              <li>Email: nilampackers@gmail.com</li>
             </ul>
           </div>
           <div>
