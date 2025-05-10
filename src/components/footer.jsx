@@ -136,7 +136,7 @@ const Footer = () => {
         <div className="my-8 bg-blue-800" />
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} BoxCraft. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Nilam Packers. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy-policy"
