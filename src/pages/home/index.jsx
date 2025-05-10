@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowRight,
   Package,
@@ -10,9 +10,15 @@ import {
 import { motion } from "framer-motion";
 import OdometerCounter from "../../components/odometercounter";
 import { ExpandableCardDemo } from "./card";
+import { Link } from "react-router-dom";
+import { getWhyChooseUsImg } from "../../sanity-client/queries/homepage";
+
 
 
 const Home = () => {
+  const [whyChooseUsImg, setWhyChooseUsImg] = useState('')
+  console.log(whyChooseUsImg);
+
   const partners = [
     { name: "EcoMaterials Inc.", logo: "/placeholder.svg?height=75&width=150" },
     { name: "LogisticsPro", logo: "/placeholder.svg?height=75&width=150" },
@@ -36,9 +42,18 @@ const Home = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  useEffect(() => {
+    (async () => {
+      const data = await getWhyChooseUsImg()
+      setWhyChooseUsImg(data)
+    })()
+  }, [])
+
   return (
     <main className="flex-grow">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]">
+      <section className="bg-[url(/Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
+        {/* <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]"> */}
+        {/* <div className="relative z-[9999] flex items-center justify-center h-full"> */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial="hidden"
@@ -54,7 +69,7 @@ const Home = () => {
             </motion.h1>
             <motion.p
               variants={fadeIn}
-              className="mt-6 text-xl md:text-2xl font-light"
+              className="mt-6 text-xl md:text-2xl font-semibold"
             >
               Innovative, sustainable, and customized corrugated packaging
               solutions for the modern world.
@@ -63,18 +78,20 @@ const Home = () => {
               variants={fadeIn}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <button
+              <Link
+                to={'/products'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 text-[#7CC1E3] bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 text-blue-600 bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
               >
                 Explore Products
-              </button>
-              <button
+              </Link>
+              <Link
+                to={'/contact'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-[#7CC1E3] hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-blue-600 hover:bg-gray-200/90 border border-gray-200"
               >
                 Get in Touch
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -108,6 +125,7 @@ const Home = () => {
             </button>
           </motion.div>
         </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
       </section>
 
       <section className="py-20 bg-(#ebf8ff)">
@@ -153,12 +171,18 @@ const Home = () => {
             ))}
 
           </div> */}
-          <ExpandableCardDemo/>
-        </div>
-        <div className="mt-16 text-center justify-self-center">
-          <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
-            View All Products <ArrowRight className="ml-2 h-4 w-4" />
-          </button>
+
+          <ExpandableCardDemo />
+
+
+
+
+          <div className="mt-16 text-center justify-self-center">
+            <Link to={'/products'} className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg f   font-semibold">
+              View All Products <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+
         </div>
       </section>
 
@@ -234,15 +258,15 @@ const Home = () => {
                 </div>
               </div>
 
-              <button className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
+              <Link to={'/about'} className="mt-8 bg-[#1D5D7B] text-white flex justify-center items-center gap-1 p-3 rounded-lg font-semibold">
                 Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
+              </Link>
             </div>
 
             <div className="relative">
               <div className="lg:w-[600px] lg:h-[600px] absolute inset-0 bg-[#a0d7f0] bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-3xl transform -rotate-6"></div>
               <img
-                src="https://placehold.co/600x600/png"
+                src={whyChooseUsImg}
                 alt="BoxCraft Facility"
                 width={600}
                 height={400}
@@ -321,12 +345,15 @@ const Home = () => {
                     <span>Fast turnaround times</span>
                   </li>
                 </ul>
-                <button
+                <Link
+                  to={'/contact'}
                   size="lg"
                   className="hidden md:inline-flex px-4 py-2 bg-black rounded-lg text-white hover:bg-gray-900"
                 >
                   Get Your Free Quote Today
-                </button>
+
+                </Link>
+
               </div>
             </div>
           </div>
