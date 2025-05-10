@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="products" element={<ProductPage />} />
       <Route path="products/:prdName" element={<Specs />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="about" element ={<About />} />
+      <Route path="about" element={<About />} />
       <Route path="*" element={<NotFoundPage />} />
       {/* <Route path="about" element={<AboutPage />} /> */}
 
