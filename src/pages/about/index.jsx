@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import Timeline from '../../components/Timeline';
-import Team from "../../components/Team";
+import Timeline from '../../components/timeline';
+import Team from "../../components/team";
 
 function About() {
   return (
