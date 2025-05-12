@@ -87,9 +87,9 @@ const Contact = () => {
                 <rect
                   x="0"
                   y="0"
-                  width="4"
-                  height="4"
-                  className="text-blue-800"
+                  width="5"
+                  height="5"
+                  className="text-white "
                   fill="currentColor"
                 />
               </pattern>
