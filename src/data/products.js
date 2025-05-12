@@ -26,20 +26,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "./Image/img.png",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -69,20 +69,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -112,20 +112,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -155,20 +155,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -198,20 +198,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -241,11 +241,11 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
@@ -298,8 +298,55 @@ const products = [
         name: "Custom Packaging Solutions",
         image: "https://placehold.co/300x200",
       },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
+  // {
+  //   id: 7,
+  //   name: "Mono Carton Boxes",
+  //   image: "/placeholder.svg",
+  //   category: "boxes",
+  //   productImage: "https://placehold.co/600x400",
+  //   productDescription:
+  //     "Our standard corrugated boxes offer superior protection and versatility for all your packaging needs.",
+  //   specifications: [
+  //     { label: "Material", value: "Corrugated cardboard" },
+  //     { label: "Flute Type", value: "B-flute" },
+  //     { label: "Thickness", value: "3mm" },
+  //     { label: "ECT", value: "32 ECT" },
+  //     { label: "Customizable", value: "Yes" },
+  //     { label: "Minimum Order", value: "500 units" },
+  //   ],
+  //   features: [
+  //     "Durable and sturdy construction",
+  //     "Excellent cushioning and product protection",
+  //     "Customizable sizes and printing options",
+  //     "Eco-friendly and recyclable material",
+  //     "Cost-effective shipping solution",
+  //     "Stackable for efficient storage and transport",
+  //   ],
+  //   relatedProducts: [
+  //     {
+  //       name: "3 Ply Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "5 Ply Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "Printed Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "Custom Packaging Solutions",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //   ],
+  // },
   {
     id: 8,
     name: "Corrugated Rolls",
@@ -327,20 +374,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -370,20 +417,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -413,20 +460,20 @@ const products = [
     relatedProducts: [
       {
         name: "3 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/3-Ply(300x200).png",
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
   {
@@ -503,18 +550,61 @@ const products = [
       },
       {
         name: "5 Ply Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/5-Ply(300x200).png",
       },
       {
         name: "Printed Corrugated Boxes",
-        image: "https://placehold.co/300x200",
+        image: "/Image/ProductImages/Printed(300x200).png",
       },
-      {
-        name: "Custom Packaging Solutions",
-        image: "https://placehold.co/300x200",
-      },
+      // {
+      //   name: "Custom Packaging Solutions",
+      //   image: "https://placehold.co/300x200",
+      // },
     ],
   },
+  // {
+  //   id: 12,
+  //   name: "Custom Packaging Solutions",
+  //   image: "/placeholder.svg",
+  //   category: "custom",
+  //   productImage: "https://placehold.co/600x400",
+  //   productDescription:
+  //     "Our standard corrugated boxes offer superior protection and versatility for all your packaging needs.",
+  //   specifications: [
+  //     { label: "Material", value: "Corrugated cardboard" },
+  //     { label: "Flute Type", value: "B-flute" },
+  //     { label: "Thickness", value: "3mm" },
+  //     { label: "ECT", value: "32 ECT" },
+  //     { label: "Customizable", value: "Yes" },
+  //     { label: "Minimum Order", value: "500 units" },
+  //   ],
+  //   features: [
+  //     "Durable and sturdy construction",
+  //     "Excellent cushioning and product protection",
+  //     "Customizable sizes and printing options",
+  //     "Eco-friendly and recyclable material",
+  //     "Cost-effective shipping solution",
+  //     "Stackable for efficient storage and transport",
+  //   ],
+  //   relatedProducts: [
+  //     {
+  //       name: "3 Ply Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "5 Ply Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "Printed Corrugated Boxes",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //     {
+  //       name: "Custom Packaging Solutions",
+  //       image: "https://placehold.co/300x200",
+  //     },
+  //   ],
+  // },
 ];
 
 export default products;

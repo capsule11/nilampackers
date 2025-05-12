@@ -11,6 +11,9 @@ import Contact from "./pages/contact";
 import { ToastContainer } from "react-toastify";
 import Specs from "./pages/product-page/specs";
 import NotFoundPage from "./pages/page-not-found";
+import About from "./pages/about";
+import 'odometer/themes/odometer-theme-default.css';
+
 // import AboutPage from "./pages/about";
 
 
@@ -21,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="products" element={<ProductPage />} />
       <Route path="products/:prdName" element={<Specs />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="about" element={<About />} />
       <Route path="*" element={<NotFoundPage />} />
       {/* <Route path="about" element={<AboutPage />} /> */}
 

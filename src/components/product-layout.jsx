@@ -11,6 +11,9 @@ const ProductLayout = ({
   features,
   relatedProducts,
 }) => {
+
+  console.log("Product Image: ", productImage);
+
   return (
     <div className="flex-grow pt-16">
       <Hero title={productName} description={productDescription} />
@@ -83,7 +86,8 @@ const ProductLayout = ({
             {relatedProducts.map((product, index) => (
               <div
                 key={index}
-                className="overflow-hidden hover:shadow-lg transition-shadow duration-300 rounded-lg bg-white"
+                // className="overflow-hidden hover:shadow-lg transition-shadow duration-300 rounded-lg bg-white"
+                className="bg-white rounded-lg text-black overflow-hidden hover:shadow-lg transition-shadow duration-300 border"
               >
                 <div className="p-0">
                   <img
@@ -91,7 +95,7 @@ const ProductLayout = ({
                     alt={product.name}
                     width={300}
                     height={200}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-full p-4"
                   />
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2 text-blue-800">
