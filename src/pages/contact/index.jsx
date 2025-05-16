@@ -27,10 +27,10 @@ const Contact = () => {
   const offices = [
     {
       name: "Office & Manufacturing Unit",
-      address: "1234 Packaging Lane, Boxville, BX 56789",
-      phone: "(555) 123-4567",
-      email: "info@boxcraft.com",
-      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
+      address: "Village Mahendiganj, Saidapar, P.O.: Rajatalab, Varanasi - 221311",
+      phone: "+91 9839145898, +91 9984444074",
+      email: "nilampackers@gmail.com",
+      hours: "Monday - Friday: 11:00 AM - 5:00 PM",
     },
   ];
 
@@ -87,9 +87,9 @@ const Contact = () => {
                 <rect
                   x="0"
                   y="0"
-                  width="4"
-                  height="4"
-                  className="text-blue-800"
+                  width="5"
+                  height="5"
+                  className="text-white "
                   fill="currentColor"
                 />
               </pattern>
@@ -162,7 +162,7 @@ const Contact = () => {
                       <input
                         id="name"
                         name="name"
-                        placeholder="John Doe"
+                        placeholder="Enter Your Name"
                         value={formData.name}
                         onChange={handleinputChange}
                         required
@@ -177,7 +177,7 @@ const Contact = () => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="Enter Your Email"
                         value={formData.email}
                         onChange={handleinputChange}
                         required
@@ -192,7 +192,7 @@ const Contact = () => {
                         id="mobile"
                         name="mobile"
                         type="tel"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="Enter Your Mobile Number"
                         value={formData.mobile}
                         onChange={handleinputChange}
                         required
@@ -206,7 +206,7 @@ const Contact = () => {
                       <input
                         id="city"
                         name="city"
-                        placeholder="New York"
+                        placeholder="Enter Your City"
                         value={formData.city}
                         onChange={handleinputChange}
                         required
