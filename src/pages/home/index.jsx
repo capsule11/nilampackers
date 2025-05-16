@@ -312,7 +312,7 @@ const Home = () => {
           <h2>Global Customers</h2>
         </div>
         <div>
-          <OdometerCounter value={5000} />
+          <OdometerCounter value={10000} />
           <h2 className="font-semibold">Tons of corrugated boxes</h2>
         </div>
       </section>
