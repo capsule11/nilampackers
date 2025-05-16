@@ -81,14 +81,14 @@ const Home = () => {
               <Link
                 to={'/products'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 text-blue-600 bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 text-black bg-white rounded-lg hover:bg-gray-200/90 border border-gray-200"
               >
                 Explore Products
               </Link>
               <Link
                 to={'/contact'}
                 size="sm"
-                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-blue-600 hover:bg-gray-200/90 border border-gray-200"
+                className="hidden md:inline-flex px-4 py-2 bg-white rounded-lg text-black hover:bg-gray-200/90 border border-gray-200"
               >
                 Get in Touch
               </Link>
