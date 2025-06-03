@@ -20,16 +20,19 @@ const Home = () => {
   console.log(whyChooseUsImg);
 
   const partners = [
-    { name: "EcoMaterials Inc.", logo: "/placeholder.svg?height=75&width=150" },
-    { name: "LogisticsPro", logo: "/placeholder.svg?height=75&width=150" },
-    {
-      name: "PackTech Solutions",
-      logo: "/placeholder.svg?height=75&width=150",
-    },
-    {
-      name: "Sustainable Packaging Alliance",
-      logo: "/placeholder.svg?height=75&width=150",
-    },
+    { logo: "/public/Image/Companylogo/Avtar.png" },
+    { logo: "/public/Image/Companylogo/Babalogo.png" },
+    {logo: "/public/Image/Companylogo/CINNIlogo.png"},
+    {logo: "/public/Image/Companylogo/goodlogo.png"},
+    {logo: "/public/Image/Companylogo/GoodMorning.png"},
+    {logo: "/public/Image/Companylogo/khaitanlogo.png"},
+    {logo: "/public/Image/Companylogo/Mayalogo.png"},
+    {logo: "/public/Image/Companylogo/Pulpware.png"},
+    {logo: "/public/Image/Companylogo/Rafan.png"},
+    {logo: "/public/Image/Companylogo/Ravi.png"},
+    {logo: "/public/Image/Companylogo/Rohit.png"},
+    {logo: "/public/Image/Companylogo/Samrat.png"},
+    {logo: "/public/Image/Companylogo/Sen.png"},
   ];
 
   const staggerContainer = {
@@ -289,8 +292,8 @@ const Home = () => {
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div key={index} className="flex justify-center">
                 <img
-                  src={"https://placehold.co/150x75/png"}
-                  alt={partner.name}
+                  src={partner.logo}
+                  // alt={partner.name}
                   className="min-w-[150px] opacity-60 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
