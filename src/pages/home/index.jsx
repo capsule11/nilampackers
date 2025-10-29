@@ -20,19 +20,19 @@ const Home = () => {
   console.log(whyChooseUsImg);
 
   const partners = [
-    { logo: "/public/Image/Companylogo/Avtar.png" },
-    { logo: "/public/Image/Companylogo/Babalogo.png" },
-    {logo: "/public/Image/Companylogo/CINNIlogo.png"},
-    {logo: "/public/Image/Companylogo/goodlogo.png"},
-    {logo: "/public/Image/Companylogo/GoodMorning.png"},
-    {logo: "/public/Image/Companylogo/khaitanlogo.png"},
-    {logo: "/public/Image/Companylogo/Mayalogo.png"},
-    {logo: "/public/Image/Companylogo/Pulpware.png"},
-    {logo: "/public/Image/Companylogo/Rafan.png"},
-    {logo: "/public/Image/Companylogo/Ravi.png"},
-    {logo: "/public/Image/Companylogo/Rohit.png"},
-    {logo: "/public/Image/Companylogo/Samrat.png"},
-    {logo: "/public/Image/Companylogo/Sen.png"},
+    { logo: "/Image/Companylogo/Avtar.png" },
+    { logo: "/Image/Companylogo/Babalogo.png" },
+    {logo: "/Image/Companylogo/CINNIlogo.png"},
+    {logo: "/Image/Companylogo/goodlogo.png"},
+    {logo: "/Image/Companylogo/GoodMorning.png"},
+    {logo: "/Image/Companylogo/khaitanlogo.png"},
+    {logo: "/Image/Companylogo/Mayalogo.png"},
+    {logo: "/Image/Companylogo/Pulpware.png"},
+    {logo: "/Image/Companylogo/Rafan.png"},
+    {logo: "/Image/Companylogo/Ravi.png"},
+    {logo: "/Image/Companylogo/Rohit.png"},
+    {logo: "/Image/Companylogo/Samrat.png"},
+    {logo: "/Image/Companylogo/Sen.png"},
   ];
 
   const staggerContainer = {
