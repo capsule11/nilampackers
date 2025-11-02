@@ -20,8 +20,8 @@ const Home = () => {
   console.log(whyChooseUsImg);
 
   const partners = [
-    { logo: "/Image/Companylogo/Avtar.png" },
-    { logo: "/Image/Companylogo/Babalogo.png" },
+    {logo: "/Image/Companylogo/Avtar.png" },
+    {logo: "/Image/Companylogo/Babalogo.png" },
     {logo: "/Image/Companylogo/CINNIlogo.png"},
     {logo: "/Image/Companylogo/goodlogo.png"},
     {logo: "/Image/Companylogo/GoodMorning.png"},
@@ -31,7 +31,7 @@ const Home = () => {
     {logo: "/Image/Companylogo/Rafan.png"},
     {logo: "/Image/Companylogo/Ravi.png"},
     {logo: "/Image/Companylogo/Rohit.png"},
-    {logo: "/Image/Companylogo/Samrat.png"},
+    {logo: "/Image/Companylogo/Samarat.png"},
     {logo: "/Image/Companylogo/Sen.png"},
   ];
 
@@ -288,18 +288,21 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="flex gap-20 items-center animate-infinite-scroll ">
-            {[...partners, ...partners, ...partners].map((partner, index) => (
-              <div key={index} className="flex justify-center">
+        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <ul
+            className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          >
+            {[...partners,...partners].map((partner, index) => (
+              <li key={index}>
                 <img
                   src={partner.logo}
-                  // alt={partner.name}
-                  className="min-w-[150px] opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="h-20 object-contain"
                 />
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
+      </div>
       </section>
 
 
