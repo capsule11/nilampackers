@@ -20,16 +20,15 @@ body {
     "wdth" 100;
 }
 /* Tailwind custom CSS for infinite scrolling */
-@keyframes scroll-left {
+@keyframes infinite-scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);  /* Move it by 50% of the width of the container */
+    transform: translateX(-50%);
   }
 }
 
-/* Apply the custom animation */
-.animate-scroll {
-  animation: scroll-left 30s linear infinite; /* Adjust the time for speed */
+.animate-infinite-scroll {
+  animation: infinite-scroll 35s linear infinite;
 }
