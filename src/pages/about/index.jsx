@@ -2,11 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import Timeline from '../../components/timeline';
 import Team from "../../components/team"
+import SEO from "../../components/SEO";
 
 
 function About() {
   return (
     <>
+      <SEO 
+        title="About Us" 
+        description="Learn about Nilam Packers, the premier corrugated packaging and box manufacturer in Varanasi. Discover our journey, mission, to provide sustainable packaging."
+        keywords="about nilam packers, corrugated packaging varanasi, box manufacturing journey UP, sustainable packaging UP"
+        currentURL="https://www.nilampackers.in/about"
+      />
       {/* #2d799e #8f7a64 brown*/}
 
       <section className="bg-[#2D799E] pt-12 md:pt-16 lg:pt-0">
