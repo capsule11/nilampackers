@@ -12,7 +12,7 @@ import OdometerCounter from "../../components/odometercounter";
 import { ExpandableCardDemo } from "./card";
 import { Link } from "react-router-dom";
 import { getWhyChooseUsImg } from "../../sanity-client/queries/homepage";
-
+import SEO from "../../components/SEO";
 
 
 const Home = () => {
@@ -54,6 +54,12 @@ const Home = () => {
 
   return (
     <main className="flex-grow">
+      <SEO 
+        title="Leading Corrugated Industry in Varanasi" 
+        description="Nilam Packers is the leading manufacturer of high-quality corrugated boxes, packaging solutions, and materials in Varanasi, Uttar Pradesh. Serving businesses with premium quality."
+        keywords="corrugated industry in varanasi, corrugated box manufacturers varanasi, packing material varanasi, nilam packers, packaging boxes varanasi"
+        currentURL="https://www.nilampackers.in/"
+      />
       <section className="bg-[url(/Image/nilampackersbg.png)] bg-cover bg-center h-screen w-full relative flex items-center justify-center overflow-hidden">
         {/* <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#4E606B]"> */}
         {/* <div className="relative z-[9999] flex items-center justify-center h-full"> */}

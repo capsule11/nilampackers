@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import SEO from "../../components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +71,12 @@ const Contact = () => {
 
   return (
     <div className="flex-grow pt-16">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with Nilam Packers for your custom corrugated packaging solutions in Varanasi. Fill out the form or drop by our office."
+        keywords="contact nilam packers, packaging solutions varanasi, custom packaging quote UP"
+        currentURL="https://www.nilampackers.in/contact"
+      />
       <section className="relative py-20 bg-[#2D799E] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <svg

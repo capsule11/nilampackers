@@ -3,6 +3,7 @@ import { ChevronRight, Filter } from "lucide-react";
 import products from "../../data/products";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEO from "../../components/SEO";
 
 const ProductPage = () => {
   const [filterOpen, setFilterOpen] = React.useState(false);
@@ -24,6 +25,12 @@ const ProductPage = () => {
 
   return (
     <main className="flex-grow pt-16">
+      <SEO 
+        title="Our Products | Packaging Solutions" 
+        description="Explore our wide range of corrugated boxes, rolls, sheets, tapes, and custom packaging solutions in Varanasi."
+        keywords="corrugated boxes varanasi, packaging rolls, packing sheets UP, custom packaging products"
+        currentURL="https://www.nilampackers.in/products"
+      />
       <section className="relative py-20 bg-[#2D799E] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <svg
